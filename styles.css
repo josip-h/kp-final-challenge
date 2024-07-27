@@ -1,7 +1,66 @@
 /* 1. CSS Reset */
+* {
+  box-sizing: border-box;
+}
 /* 2. Global CSS */
+:root {
+  --max-content-width: 75rem;
+
+  --color-blue-dark: #2e323f;
+  --color-blue-light: #3b4050;
+  --color-grey: #6f737f;
+  --color-white: #fff;
+  --color-gold: #a59678;
+  --color-black: #000;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 1em 2em;
+}
 /* 3. Composition */
 /* 4. Utilities */
+.container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+.color-background-dark-blue {
+  background: var(--color-blue-dark);
+}
+
+.display--hidden {
+  display: none;
+}
 /* 5. Blocks */
+/* Header */
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation li {
+  padding: 0.5em 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
 /* 6. Exceptions */
 /* 7. Media queries */
