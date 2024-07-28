@@ -16,19 +16,98 @@
 
 body {
   margin: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Oswald";
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: 1.125rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding-block: 2rem;
 }
 
 nav {
-  padding: 1em 2em;
+  padding: 1em 0;
+  width: 85%;
+  margin: 0 auto;
 }
+
+hr {
+  width: 85%;
+}
+
 /* 3. Composition */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
 /* 4. Utilities */
 .container {
   max-width: var(--max-content-width);
   margin: 0 auto;
 }
+
+.row {
+  width: 85%;
+  margin: 0 auto;
+  /* padding-block: 2rem; */
+}
+
+.card {
+  padding: 1em;
+  text-align: center;
+}
+
+.button {
+  font-family: "Oswald";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.4em 1em;
+}
+
 .color-background-dark-blue {
   background: var(--color-blue-dark);
+}
+
+.color-background-light-blue {
+  background-color: var(--color-blue-light);
+}
+
+.color-background-gold {
+  background-color: var(--color-gold);
+}
+
+.color-type-white {
+  color: #fff;
+}
+
+.color-type-grey {
+  color: var(--color-grey);
+}
+
+.color-type-gold {
+  color: var(--color-gold);
 }
 
 .display--hidden {
@@ -60,6 +139,23 @@ nav {
   font-weight: bold;
   color: var(--color-white);
   cursor: pointer;
+}
+
+.navigation__login .sign-up {
+  width: 15ch;
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+/* Main */
+/* Section-1 */
+.section-1__title {
+  font-size: 3rem;
+  margin-block-end: 1em;
+}
+/* Section-2 */
+.section-2__title {
+  text-align: center;
+  margin-block-end: 1em;
 }
 
 /* 6. Exceptions */
