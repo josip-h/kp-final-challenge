@@ -88,7 +88,7 @@
 
       <section class="section-2">
         <div class="container">
-          <div class="row">
+          <div class="row | flow">
             <div class="col">
               <h2 class="section-2__title">Mobile-first</h2>
               <p class="section-2__description">
@@ -97,8 +97,6 @@
                 enim ad minim veniam.
               </p>
             </div>
-          </div>
-          <div class="row">
             <div class="col">
               <h2 class="section-2__title">Efficient</h2>
               <p class="section-2__description">
@@ -107,9 +105,7 @@
                 enim ad minim veniam.
               </p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col | flow">
+            <div class="col">
               <h2 class="section-2__title">Done</h2>
               <p class="section-2__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -121,12 +117,12 @@
         </div>
       </section>
 
-      <hr class="container" />
+      <div class="container"><hr /></div>
 
       <section class="section-3">
         <div class="container">
-          <div class="row">
-            <div class="col">
+          <div class="row | flow">
+            <div class="col | flow">
               <h2 class="section-3__title | color-type-gold">
                 It doesn't have to be so hard
               </h2>
@@ -151,7 +147,7 @@
                 dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
-            <div class="col | flow">
+            <div class="col section-3__cards | flow">
               <div class="card | color-background-dark-blue color-type-white">
                 <h2 class="card__title">Break it down</h2>
                 <p class="card__description">
@@ -178,5 +174,50 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer | color-background-dark-blue">
+      <div class="container">
+        <h3 class="footer__main-title">Just scratching the surface</h3>
+        <div class="row | flow">
+          <div class="footer__about">
+            <h3 class="about__title title">About our company</h3>
+            <p class="about__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+          </div>
+
+          <div class="navigation | flow">
+            <div class="navigation__getting-around">
+              <h3 class="title">Getting around</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navigation__other-things">
+              <h3 class="title">Other things</h3>
+              <ul>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">dolor</a></li>
+                <li><a href="#">sit amet</a></li>
+                <li><a href="#">consectetur</a></li>
+              </ul>
+            </div>
+            <div class="navigation__and-more">
+              <h3 class="title">And more</h3>
+              <ul>
+                <li><a href="#">Lorem ipsum</a></li>
+                <li><a href="#">dolor</a></li>
+                <li><a href="#">sit amet</a></li>
+                <li><a href="#">consectetur</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

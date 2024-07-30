@@ -20,7 +20,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Oswald";
   font-weight: bold;
   line-height: 1.1;
@@ -29,6 +30,11 @@ h2 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  text-align: center;
 }
 
 p {
@@ -41,7 +47,7 @@ img {
 }
 
 section {
-  padding-block: 2rem;
+  padding-block: 2.5rem;
 }
 
 nav {
@@ -59,6 +65,7 @@ hr {
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
+
 /* 4. Utilities */
 .container {
   max-width: var(--max-content-width);
@@ -155,8 +162,130 @@ hr {
 /* Section-2 */
 .section-2__title {
   text-align: center;
+  margin-block-end: 0.5em;
+}
+
+.section-2 .row {
+  --flow-space: 2.5em;
+}
+/* Section-3 */
+.section-3 .col {
+  --flow-space: 2em;
+}
+
+/* Footer */
+.footer {
+  padding-block: 3rem;
+}
+.footer__main-title {
+  font-size: 2.5rem;
+  color: var(--color-white);
   margin-block-end: 1em;
+}
+
+.footer__about {
+  display: none;
+}
+
+.footer .title {
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.footer .row {
+  --flow-space: 3em;
+}
+
+.footer .about__description {
+  color: var(--color-white);
+}
+
+.footer .navigation__and-more {
+  display: none;
 }
 
 /* 6. Exceptions */
 /* 7. Media queries */
+
+@media (min-width: 44rem) {
+  .icons__hamburger {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation__menu {
+    display: flex;
+    gap: 4em;
+
+    ul {
+      display: flex;
+      gap: 1.5em;
+    }
+  }
+
+  .section-2 .row {
+    display: flex;
+    gap: 1em;
+
+    .col {
+      margin: 0;
+    }
+  }
+
+  .section-3__cards {
+    display: flex;
+    gap: 1em;
+
+    .card {
+      margin: 0;
+    }
+  }
+
+  footer .navigation {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .footer .navigation__and-more {
+    display: block;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-1 .row {
+    display: flex;
+
+    div {
+      margin: 0;
+    }
+  }
+
+  .section-3 .row {
+    display: flex;
+    gap: 1em;
+
+    .section-3__cards {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  .footer__about {
+    display: block;
+    width: 50%;
+    margin-top: 3em;
+  }
+
+  .footer .row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
