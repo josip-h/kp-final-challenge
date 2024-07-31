@@ -56,6 +56,26 @@ nav {
   margin: 0 auto;
 }
 
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  padding: 0.5em 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
 hr {
   width: 85%;
 }
@@ -122,85 +142,65 @@ hr {
 }
 /* 5. Blocks */
 /* Header */
-.icons {
+header .icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navigation ul {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.navigation li {
-  padding: 0.5em 0;
-}
-
-.navigation a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Oswald";
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--color-white);
-  cursor: pointer;
-}
-
-.navigation__login .sign-up {
+header .navigation__login .sign-up {
   width: 15ch;
   border-radius: 2rem;
   margin: 0 auto;
 }
 /* Main */
 /* Section-1 */
-.section-1__title {
+#section-1 .section-1__title {
   font-size: 3rem;
   margin-block-end: 1em;
 }
 /* Section-2 */
-.section-2__title {
+#section-2 .section-2__title {
   text-align: center;
   margin-block-end: 0.5em;
 }
 
-.section-2 .row {
+#section-2 .row {
   --flow-space: 2.5em;
 }
 /* Section-3 */
-.section-3 .col {
+#section-3 .col {
   --flow-space: 2em;
 }
 
 /* Footer */
-.footer {
+footer {
   padding-block: 3rem;
 }
-.footer__main-title {
+footer .footer__main-title {
   font-size: 2.5rem;
   color: var(--color-white);
   margin-block-end: 1em;
 }
 
-.footer__about {
+footer .footer__about {
   display: none;
 }
 
-.footer .title {
+footer .title {
   color: var(--color-gold);
   text-transform: uppercase;
 }
 
-.footer .row {
+footer .row {
   --flow-space: 3em;
 }
 
-.footer .about__description {
+footer .about__description {
   color: var(--color-white);
 }
 
-.footer .navigation__and-more {
+footer .navigation__and-more {
   display: none;
 }
 
@@ -208,16 +208,17 @@ hr {
 /* 7. Media queries */
 
 @media (min-width: 44rem) {
-  .icons__hamburger {
-    display: none;
+  /* Header */
+  nav {
+    padding: 0;
   }
 
-  nav {
+  header nav {
     display: flex;
     justify-content: space-between;
   }
 
-  .navigation__menu {
+  header .navigation__menu {
     display: flex;
     gap: 4em;
 
@@ -227,22 +228,38 @@ hr {
     }
   }
 
-  .section-2 .row {
+  header .icons__hamburger {
+    display: none;
+  }
+
+  /* Section 1 */
+  #section-1 {
+    padding: 6rem;
+  }
+
+  /* Section 2 */
+  #section-2 .row {
     display: flex;
-    gap: 1em;
+    gap: 2em;
 
     .col {
       margin: 0;
     }
   }
 
-  .section-3__cards {
+  /* Section 3 */
+  #section-3 .section-3__cards {
     display: flex;
     gap: 1em;
 
     .card {
       margin: 0;
     }
+  }
+
+  /* Footer */
+  footer h3 {
+    font-size: 1.5rem;
   }
 
   footer .navigation {
@@ -254,23 +271,31 @@ hr {
       width: 100%;
     }
   }
-  .footer .navigation__and-more {
+
+  footer .navigation__and-more {
     display: block;
+  }
+
+  footer .navigation a {
+    text-transform: capitalize;
   }
 }
 
 @media (min-width: 60rem) {
-  .section-1 .row {
+  /* Section 1 */
+  #section-1 .row {
     display: flex;
+    gap: 1em;
 
     div {
       margin: 0;
     }
   }
 
-  .section-3 .row {
+  /* Section 3 */
+  #section-3 .row {
     display: flex;
-    gap: 1em;
+    gap: 2em;
 
     .section-3__cards {
       flex-direction: column;
@@ -278,13 +303,14 @@ hr {
     }
   }
 
-  .footer__about {
+  /* Footer */
+  footer .footer__about {
     display: block;
     width: 50%;
     margin-top: 3em;
   }
 
-  .footer .row {
+  footer .row {
     display: flex;
     justify-content: space-between;
   }
